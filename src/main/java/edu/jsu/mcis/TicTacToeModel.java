@@ -92,12 +92,12 @@ public class TicTacToeModel {
            empty! */
         
         /* INSERT YOUR CODE HERE */
-		if(xTurn && !isSquareMarked(row, col)){
+		if(xTurn && isValidSquare(row, col) && !isSquareMarked(row, col)){
             grid[row][col] = getMark.X;
             xTurn = false;
             return true; 
         }
-        else if(!xTurn && !isSquareMarked(row, col)){
+        else if(!xTurn && isValidSquare(row, col) && !isSquareMarked(row, col)){
             grid[row][col]= getMark.O;
             xTurn= true;
             return true;
