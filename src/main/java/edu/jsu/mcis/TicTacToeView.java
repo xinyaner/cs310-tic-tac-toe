@@ -24,21 +24,9 @@ public class TicTacToeView {
 		System.out.print("\n\n");
 		for (int i = 0; i < model.getWidth(); i++) {
 			System.out.print(i + " ");
-			for (int j = 0; j < model.getWidth(); j++) {
-				if(model.getMark(i,j) == TicTacToeModel.Mark.EMPTY) {
-					System.out.print("-");
-                }
-                
-				else {
-					System.out.print(model.getMark(i,j));
-			
-				}
-			}
-            System.out.print("\n");
-            
         }
         
-		System.out.print("\n\n\n");
+		System.out.print("\n\n");
         
 }
 
@@ -47,13 +35,15 @@ public class TicTacToeView {
         /* Display a prompt for the player's next move (see examples) */
 
         /* INSERT YOUR CODE HERE */
-		if(model.isXTurn()){
+		
+		if(xTurn == true){
                 System.out.println("Player 1 (X) Move: ");
         }
         else{
-                System.out.println("Player 2 (O) Move:");
+                System.out.println("Player 2 (O) Move: ");
         }
-		      System.out.println("Enter the row and column numbers, separated by a space:");
+		System.out.println("Enter the row and column numbers, separated by a space:	");
+		grid [row][col] = keyboard.next.split(“ “);
     }
 
     public void showInputError() {

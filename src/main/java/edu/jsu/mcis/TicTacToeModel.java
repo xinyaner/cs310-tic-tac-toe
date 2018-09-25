@@ -92,18 +92,18 @@ public class TicTacToeModel {
            empty! */
         
         /* INSERT YOUR CODE HERE */
-		if(xTurn && isValidSquare(row, col) && !isSquareMarked(row, col)){
-            grid[row][col] = Mark.X;
-            xTurn= false;
+		if(xTurn && !isSquareMarked(row, col)){
+            grid[row][col] = getMark.X;
+            xTurn = false;
             return true; 
         }
-        else if(!xTurn && isValidSquare(row, col) && !isSquareMarked(row, col)){
-            grid[row][col]= Mark.O;
+        else if(!xTurn && !isSquareMarked(row, col)){
+            grid[row][col]= getMark.O;
             xTurn= true;
             return true;
         }  
-		else {
-			return false;}
+		else 
+			return false;
 
         //return false; /* remove this line! */
         
@@ -117,9 +117,9 @@ public class TicTacToeModel {
 		if(row>= width || row< 0 || col >= width || col <0 ){
                 return false;
         }
-		else {
+		else 
 			return true;
-		}
+		
 
         //return false; /* remove this line! */
         
@@ -133,9 +133,9 @@ public class TicTacToeModel {
 		if(getMark(row, col) == Mark.EMPTY){
             return false;
         }
-		else { 
+		else 
 			return true; 
-		}
+		
 
         //return false; /* remove this line! */
             
