@@ -25,6 +25,11 @@ public class TicTacToe {
 
         TicTacToeModel model = new TicTacToeModel(width);
         TicTacToeView view = new TicTacToeView(model);
+		JFrame win = new JFrame("Tic-Tac-Toe");
+		win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		win.add(view);
+		win.pack();
+		win.setVisible(true);
         TicTacToeController controller = new TicTacToeController(model, view);
         
         /* MAIN LOOP */
